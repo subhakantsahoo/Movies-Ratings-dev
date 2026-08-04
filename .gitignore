@@ -1,0 +1,5 @@
+# Ignore installed dependency folders
+**/node_modules/
+
+# Optional: ignore local package-manager caches if they appear
+.npm/
