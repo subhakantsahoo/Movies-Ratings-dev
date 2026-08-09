@@ -27,3 +27,7 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t movies-ratings-backend .
+
+      - name: Deploy to Render
+        if: success()
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
